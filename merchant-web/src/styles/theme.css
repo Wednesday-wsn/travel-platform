@@ -1,0 +1,401 @@
+/* =====================================================================
+   主题样式 —— 直接套用自 Daymychen/art-design-pro 源码（商家端）
+   与 admin-web 共用同一套设计系统，仅主色换为商家品牌绿。
+   ===================================================================== */
+
+:root {
+  /* ---- Theme color（rgb 分量） ---- */
+  --art-primary: 22, 163, 74; /* #16a34a 商家品牌绿 */
+  --art-secondary: 73, 190, 255;
+  --art-error: 250, 137, 107;
+  --art-info: 83, 155, 255;
+  --art-success: 22, 163, 74;
+  --art-warning: 255, 174, 31;
+  --art-danger: 255, 77, 79;
+
+  --art-bg-primary: 232, 246, 237;
+  --art-bg-secondary: 232, 247, 255;
+  --art-bg-success: 230, 255, 250;
+  --art-bg-error: 253, 237, 232;
+  --art-bg-info: 235, 243, 254;
+  --art-bg-warning: 254, 245, 229;
+  --art-bg-danger: 253, 237, 232;
+
+  --art-hoverColor: 246, 249, 252;
+  --art-grey100: 242, 246, 250;
+  --art-grey200: 234, 239, 244;
+
+  --art-color: #ffffff;
+  --art-light: #f9f9f9;
+  --art-dark: #1e2129;
+
+  /* ---- 灰阶 ---- */
+  --art-gray-100: #f9f9f9;
+  --art-gray-100-rgb: 249, 249, 249;
+  --art-gray-200: #f1f1f4;
+  --art-gray-200-rgb: 241, 241, 244;
+  --art-gray-300: #dbdfe9;
+  --art-gray-300-rgb: 219, 223, 233;
+  --art-gray-400: #c4cada;
+  --art-gray-400-rgb: 196, 202, 218;
+  --art-gray-500: #99a1b7;
+  --art-gray-500-rgb: 153, 161, 183;
+  --art-gray-600: #78829d;
+  --art-gray-600-rgb: 120, 130, 157;
+  --art-gray-700: #4b5675;
+  --art-gray-700-rgb: 75, 86, 117;
+  --art-gray-800: #252f4a;
+  --art-gray-800-rgb: 37, 47, 74;
+  --art-gray-900: #071437;
+  --art-gray-900-rgb: 7, 20, 55;
+
+  --art-text-muted: #99a1b7;
+  --art-text-gray-100: #f9f9f9;
+  --art-text-gray-200: #f1f1f4;
+  --art-text-gray-300: #dbdfe9;
+  --art-text-gray-400: #c4cada;
+  --art-text-gray-500: #99a1b7;
+  --art-text-gray-600: #78829d;
+  --art-text-gray-700: #4b5675;
+  --art-text-gray-800: #252f4a;
+  --art-text-gray-900: #071437;
+
+  --art-border-color: #eaebf1;
+  --art-border-dashed-color: #dbdfe9;
+  --art-root-card-border-color: #f1f1f4;
+
+  --art-box-shadow-xs: 0 0.1rem 0.75rem 0.25rem rgba(0, 0, 0, 0.05);
+  --art-box-shadow-sm: 0 0.1rem 1rem 0.25rem rgba(0, 0, 0, 0.05);
+  --art-box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.075);
+  --art-box-shadow-lg: 0 1rem 2rem 1rem rgba(0, 0, 0, 0.1);
+  --art-root-card-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+  --art-card-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+  --art-card-border: rgba(var(--art-gray-300-rgb), 0.7);
+
+  --art-bg-color: #fafbfc;
+  --art-main-bg-color: #ffffff;
+
+  /* ---- Element Plus 主题色（主色 = 商家绿） ---- */
+  --el-color-primary: #16a34a;
+  --el-color-primary-light-3: #5cbf80;
+  --el-color-primary-light-5: #8bd1a5;
+  --el-color-primary-light-7: #b9e3c9;
+  --el-color-primary-light-8: #d0eddb;
+  --el-color-primary-light-9: #e8f6ed;
+  --el-color-primary-dark-2: #12823b;
+
+  --el-color-success: #16a34a;
+  --el-color-success-light-3: #5cbf80;
+  --el-color-success-light-5: #8bd1a5;
+  --el-color-success-light-7: #b9e3c9;
+  --el-color-success-light-8: #d0eddb;
+  --el-color-success-light-9: #e8f6ed;
+  --el-color-success-dark-2: #12823b;
+
+  --el-color-warning: #ffae1f;
+  --el-color-warning-light-3: #ffc662;
+  --el-color-warning-light-5: #ffd78f;
+  --el-color-warning-light-7: #ffe7bc;
+  --el-color-warning-light-8: #ffefd2;
+  --el-color-warning-light-9: #fff7e9;
+  --el-color-warning-dark-2: #cc8b19;
+
+  --el-color-danger: #ff4d4f;
+  --el-color-danger-light-3: #ff8284;
+  --el-color-danger-light-5: #ffa6a7;
+  --el-color-danger-light-7: #ffcaca;
+  --el-color-danger-light-8: #ffdbdc;
+  --el-color-danger-light-9: #ffeded;
+  --el-color-danger-dark-2: #cc3e3f;
+
+  --el-color-error: #fa896b;
+  --el-color-error-light-3: #fcac97;
+  --el-color-error-light-5: #fdc4b5;
+  --el-color-error-light-7: #fedcd3;
+  --el-color-error-light-8: #fee7e1;
+  --el-color-error-light-9: #fff3f0;
+  --el-color-error-dark-2: #c86e56;
+
+  --el-color-info: #539bff;
+  --el-color-info-light-3: #87b9ff;
+  --el-color-info-light-5: #a9cdff;
+  --el-color-info-light-7: #cbe1ff;
+  --el-color-info-light-8: #ddebff;
+  --el-color-info-light-9: #eef5ff;
+  --el-color-info-dark-2: #427ccc;
+
+  --el-border-radius-base: 8px;
+  --el-border-radius-small: 10px;
+  --el-border-radius-round: 20px;
+  --el-messagebox-border-radius: 12px;
+  --el-font-weight-primary: 400;
+  --el-font-family: Inter, 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--art-text-gray-700);
+  text-align: left;
+  font-family: var(--el-font-family);
+  background: var(--art-bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  color: var(--art-text-gray-800);
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 0 !important;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--art-text-gray-100);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #cccccc !important;
+  transition: all 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b0abab !important;
+}
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+/* ---- Element Plus 组件样式优化（原 el-ui.scss） ---- */
+.el-tag {
+  height: 26px !important;
+  line-height: 26px !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  font-weight: bold;
+  transition: all 0s !important;
+}
+
+.el-dropdown-menu {
+  min-width: 116px !important;
+  padding: 6px !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+.el-dropdown-menu .el-dropdown-menu__item {
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+}
+.el-dropdown-menu .el-dropdown-menu__item:hover:not(.is-disabled) {
+  color: var(--art-gray-900) !important;
+  background-color: var(--art-gray-200) !important;
+}
+
+.el-select__popper,
+.el-dropdown__popper {
+  margin-top: -6px !important;
+}
+.el-select__popper .el-popper__arrow,
+.el-dropdown__popper .el-popper__arrow {
+  display: none;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  border-radius: 6px;
+}
+
+.el-checkbox .el-checkbox__inner {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 5px !important;
+}
+
+.el-message-box__headerbtn .el-message-box__close,
+.el-dialog__headerbtn .el-dialog__close {
+  color: var(--art-gray-500) !important;
+  top: 7px !important;
+  right: 7px !important;
+  padding: 7px !important;
+  border-radius: 5px !important;
+  transition: all 0.3s !important;
+}
+.el-message-box__headerbtn .el-message-box__close:hover,
+.el-dialog__headerbtn .el-dialog__close:hover {
+  background-color: var(--art-gray-200) !important;
+  color: var(--art-gray-800) !important;
+}
+
+.el-message-box {
+  padding: 25px 20px !important;
+}
+.el-message-box__title {
+  font-weight: 500 !important;
+}
+
+.el-message {
+  background-color: var(--art-main-bg-color) !important;
+  border: 0 !important;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+}
+.el-message p {
+  color: #515a6e !important;
+  font-size: 13px;
+}
+
+.el-dialog__header {
+  padding: 10px;
+}
+.el-dialog__body {
+  padding: 25px 10px !important;
+}
+.el-dialog__footer {
+  padding: 10px !important;
+}
+
+.el-select-dropdown__list {
+  padding: 5px !important;
+}
+.el-select-dropdown__list .el-select-dropdown__item {
+  height: 38px !important;
+  line-height: 38px !important;
+  border-radius: 6px !important;
+}
+.el-select-dropdown__list .el-select-dropdown__item.is-selected {
+  color: var(--art-gray-900) !important;
+  font-weight: 400 !important;
+  background-color: var(--art-gray-200) !important;
+}
+.el-select-dropdown__list .el-select-dropdown__item:hover {
+  background-color: var(--art-gray-200) !important;
+}
+
+.el-card {
+  border: 1px solid rgba(var(--art-gray-300-rgb), 0.3) !important;
+  border-radius: 12px;
+  box-shadow: var(--art-card-shadow) !important;
+}
+.el-card__header {
+  border-bottom: 1px solid var(--art-border-color);
+}
+
+/* =====================================================================
+   深色主题（原 variables.scss html.dark + dark.scss + el-dark.scss）
+   ===================================================================== */
+html.dark {
+  --art-hoverColor: 51, 63, 85;
+  --art-grey100: 51, 63, 85;
+  --art-grey200: 70, 86, 112;
+  --art-color: #000000;
+  --art-light: #1b1c22;
+  --art-dark: #272a34;
+
+  --art-gray-100: #1b1c22;
+  --art-gray-100-rgb: 27, 28, 34;
+  --art-gray-200: #26272f;
+  --art-gray-200-rgb: 38, 39, 47;
+  --art-gray-300: #363843;
+  --art-gray-300-rgb: 54, 56, 67;
+  --art-gray-400: #464852;
+  --art-gray-400-rgb: 70, 72, 82;
+  --art-gray-500: #636674;
+  --art-gray-500-rgb: 99, 102, 116;
+  --art-gray-600: #808290;
+  --art-gray-600-rgb: 128, 130, 144;
+  --art-gray-700: #9a9cae;
+  --art-gray-700-rgb: 154, 156, 174;
+  --art-gray-800: #b5b7c8;
+  --art-gray-800-rgb: 181, 183, 200;
+  --art-gray-900: #f5f5f5;
+  --art-gray-900-rgb: 245, 245, 245;
+
+  --art-text-muted: #636674;
+  --art-text-gray-100: #1b1c22;
+  --art-text-gray-200: #26272f;
+  --art-text-gray-300: #363843;
+  --art-text-gray-400: #464852;
+  --art-text-gray-500: #636674;
+  --art-text-gray-600: #808290;
+  --art-text-gray-700: #9a9cae;
+  --art-text-gray-800: #b5b7c8;
+  --art-text-gray-900: #f5f5f5;
+
+  --art-border-color: #26272f;
+  --art-border-dashed-color: #363843;
+  --art-root-card-border-color: #1e2027;
+  --art-root-card-box-shadow: none;
+
+  --art-bg-color: #070707;
+  --art-main-bg-color: #161618;
+
+  --el-text-color-regular: rgba(255, 255, 255, 0.7);
+  --el-text-color-primary: rgba(255, 255, 255, 0.9);
+
+  --el-color-primary: #16a34a;
+  --el-color-primary-light-3: #0f7234;
+  --el-color-primary-light-5: #0b5225;
+  --el-color-primary-light-7: #073116;
+  --el-color-primary-light-8: #04210f;
+  --el-color-primary-light-9: #021007;
+  --el-color-primary-dark-2: #45b56e;
+
+  --el-color-success: #16a34a;
+  --el-color-success-light-3: #0f7234;
+  --el-color-success-light-5: #0b5225;
+  --el-color-success-light-7: #073116;
+  --el-color-success-light-8: #04210f;
+  --el-color-success-light-9: #021007;
+  --el-color-success-dark-2: #45b56e;
+
+  --el-color-warning: #ffae1f;
+  --el-color-warning-light-3: #b37a16;
+  --el-color-warning-light-5: #805710;
+  --el-color-warning-light-7: #4d3409;
+  --el-color-warning-light-8: #332306;
+  --el-color-warning-light-9: #1a1103;
+  --el-color-warning-dark-2: #ffbe4c;
+
+  --el-color-danger: #ff4d4f;
+  --el-color-danger-light-3: #b33637;
+  --el-color-danger-light-5: #802728;
+  --el-color-danger-light-7: #4d1718;
+  --el-color-danger-light-8: #330f10;
+  --el-color-danger-light-9: #1a0808;
+  --el-color-danger-dark-2: #ff7172;
+
+  --el-color-error: #fa896b;
+  --el-color-error-light-3: #af604b;
+  --el-color-error-light-5: #7d4536;
+  --el-color-error-light-7: #4b2920;
+  --el-color-error-light-8: #321b15;
+  --el-color-error-light-9: #190e0b;
+  --el-color-error-dark-2: #fba189;
+
+  --el-color-info: #539bff;
+  --el-color-info-light-3: #3a6db3;
+  --el-color-info-light-5: #2a4e80;
+  --el-color-info-light-7: #192f4d;
+  --el-color-info-light-8: #111f33;
+  --el-color-info-light-9: #08101a;
+  --el-color-info-dark-2: #75afff;
+}
+
+html.dark img {
+  filter: brightness(0.92) saturate(1.25);
+}

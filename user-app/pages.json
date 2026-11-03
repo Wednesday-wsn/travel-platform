@@ -1,0 +1,150 @@
+{
+    "pages" : [
+        {
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "旅游服务平台"
+            }
+        },
+        {
+            "path" : "pages/order/list",
+            "style" : {
+                "navigationBarTitleText" : "我的订单"
+            }
+        },
+        {
+            "path" : "pages/mine/mine",
+            "style" : {
+                "navigationBarTitleText" : "我的"
+            }
+        },
+        {
+            "path" : "pages/login/login",
+            "style" : {
+                "navigationBarTitleText" : "登录"
+            }
+        },
+        {
+            "path" : "pages/register/register",
+            "style" : {
+                "navigationBarTitleText" : "注册"
+            }
+        },
+        {
+            "path" : "pages/discover/discover",
+            "style" : {
+                "navigationBarTitleText" : "发现"
+            }
+        },
+        {
+            "path" : "pages/hotel/detail",
+            "style" : {
+                "navigationBarTitleText" : "酒店详情"
+            }
+        },
+        {
+            "path" : "pages/spot/detail",
+            "style" : {
+                "navigationBarTitleText" : "景点详情"
+            }
+        },
+        {
+            "path" : "pages/restaurant/detail",
+            "style" : {
+                "navigationBarTitleText" : "餐厅详情"
+            }
+        },
+        {
+            "path" : "pages/order/confirm",
+            "style" : {
+                "navigationBarTitleText" : "确认订单"
+            }
+        },
+        {
+            "path" : "pages/order/detail",
+            "style" : {
+                "navigationBarTitleText" : "订单详情"
+            }
+        },
+        {
+            "path" : "pages/favorite/list",
+            "style" : {
+                "navigationBarTitleText" : "我的收藏"
+            }
+        },
+        {
+            "path" : "pages/comment/list",
+            "style" : {
+                "navigationBarTitleText" : "用户评价"
+            }
+        },
+        {
+            "path" : "pages/comment/write",
+            "style" : {
+                "navigationBarTitleText" : "发表评价"
+            }
+        },
+        {
+            "path" : "pages/comment/mine",
+            "style" : {
+                "navigationBarTitleText" : "我的评价"
+            }
+        },
+        {
+            "path" : "pages/profile/edit",
+            "style" : {
+                "navigationBarTitleText" : "编辑资料"
+            }
+        },
+        {
+            "path" : "pages/notice/list",
+            "style" : {
+                "navigationBarTitleText" : "公告"
+            }
+        },
+        {
+            "path" : "pages/notice/detail",
+            "style" : {
+                "navigationBarTitleText" : "公告详情"
+            }
+        },
+        {
+            "path" : "pages/ai/index",
+            "style" : {
+                "navigationBarTitleText" : "AI 旅行助手"
+            }
+        }
+    ],
+    "tabBar" : {
+        "color" : "#ABA79A",
+        "selectedColor" : "#2F4F45",
+        "backgroundColor" : "#ffffff",
+        "borderStyle" : "black",
+        "list" : [
+            {
+                "pagePath" : "pages/index/index",
+                "text" : "首页",
+                "iconPath" : "static/tabbar/home.png",
+                "selectedIconPath" : "static/tabbar/home-active.png"
+            },
+            {
+                "pagePath" : "pages/order/list",
+                "text" : "订单",
+                "iconPath" : "static/tabbar/order.png",
+                "selectedIconPath" : "static/tabbar/order-active.png"
+            },
+            {
+                "pagePath" : "pages/mine/mine",
+                "text" : "我的",
+                "iconPath" : "static/tabbar/mine.png",
+                "selectedIconPath" : "static/tabbar/mine-active.png"
+            }
+        ]
+    },
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarTitleText" : "旅游服务平台",
+        "navigationBarBackgroundColor" : "#ffffff",
+        "backgroundColor" : "#F4F2EB"
+    }
+}

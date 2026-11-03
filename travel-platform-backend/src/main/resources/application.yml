@@ -1,0 +1,53 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: travel-platform
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/travel_platform?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    # 密码不硬编码：本地开发见 application-local.yml，部署用环境变量 DB_PASSWORD
+    password: ${DB_PASSWORD}
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  jackson:
+    time-zone: GMT+8
+
+mybatis-plus:
+  type-aliases-package: com.travel.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   # 开发期打印 SQL，上线可移除
+  global-config:
+    db-config:
+      id-type: auto
+
+# 自定义配置
+travel:
+  jwt:
+    # 密钥（HS256 至少 32 字节）：本地开发见 application-local.yml，部署用环境变量 JWT_SECRET
+    secret: ${JWT_SECRET}
+    # token 有效期（秒），默认 1 天
+    expire: 86400
+    header: Authorization
+  upload:
+    # 上传文件保存目录（相对项目运行目录）
+    path: ./upload/
+    # 访问图片时的 URL 前缀
+    url-prefix: /upload/
+  ai:
+    # 大模型服务商（OpenAI 兼容接口）：DeepSeek
+    base-url: https://api.deepseek.com
+    # API Key，务必保密：本地开发见 application-local.yml，部署用环境变量 DEEPSEEK_API_KEY
+    api-key: ${DEEPSEEK_API_KEY}
+    model: deepseek-chat

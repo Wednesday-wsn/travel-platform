@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Read(//c/Users/32178/Desktop/**)",
+      "Bash(ls uni.scss)",
+      "Bash(cat uni.scss)",
+      "Bash(mkdir -p user-app/static/iconfont)",
+      "Bash(cp tuniaoUI-master/tuniao-ui/iconfont.css user-app/static/iconfont/tuniao-iconfont.css)",
+      "Bash(python -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(cat index.html)",
+      "Bash(find . -maxdepth 2 -name \"index.html\" -not -path \"*/node_modules/*\")",
+      "Bash(python -c \"import rapidocr_onnxruntime; print\\('rapidocr ok'\\)\")",
+      "Read(//d/JAVAEE/**)",
+      "Read(//c/Program Files/Java/latest/**)",
+      "Bash(\"/d/JDK/jdk-17/bin/java.exe\" -version)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | 连接耗时 %{time_connect}s | 总耗时 %{time_total}s\\\\n\" --max-time 10 \"https://picsum.photos/seed/hotel-1/800/500\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 5 \"http://localhost:8080/api/public/banner/list\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" --max-time 5 \"http://localhost:8080/upload/5c7c80c48060490c84c7a84e2f8c877c.png\")",
+      "Bash(redis-cli --version)",
+      "Bash(python -c \"import redis; print\\('redis', redis.__version__\\)\")"
+    ]
+  }
+}
